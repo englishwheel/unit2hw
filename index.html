@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 2 B2 — Extra Practice</title>
+<style>
+  :root{
+    --bg:#f4f7fb; --card:#fff; --primary:#2563eb; --primary-dark:#1e40af;
+    --ok:#16a34a; --bad:#dc2626; --border:#e2e8f0; --text:#1e293b; --muted:#64748b;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; font-family:"Segoe UI",Roboto,Arial,sans-serif;
+    background:var(--bg); color:var(--text); line-height:1.55;
+  }
+  header{
+    background:linear-gradient(135deg,#2563eb,#1e40af);
+    color:#fff; padding:32px 20px; text-align:center;
+  }
+  header h1{margin:0 0 8px; font-size:1.7rem}
+  header p{margin:0; opacity:.9}
+  main{max-width:950px; margin:0 auto; padding:24px 16px 80px}
+  .card{
+    background:var(--card); border:1px solid var(--border); border-radius:14px;
+    padding:22px 20px; margin-bottom:22px; box-shadow:0 4px 14px rgba(0,0,0,.04);
+  }
+  .card h2{
+    margin:0 0 6px; font-size:1.15rem; color:var(--primary-dark);
+    display:flex; align-items:center; gap:8px;
+  }
+  .card h2 .num{
+    background:var(--primary); color:#fff; width:26px; height:26px;
+    border-radius:50%; display:inline-flex; align-items:center; justify-content:center;
+    font-size:.85rem; flex-shrink:0;
+  }
+  .hint{color:var(--muted); font-size:.9rem; margin:0 0 16px}
+  .q{margin-bottom:18px; padding-bottom:12px; border-bottom:1px dashed #e2e8f0}
+  .q:last-child{border-bottom:none; margin-bottom:0; padding-bottom:0}
+  .prompt{margin-bottom:10px; font-size:1.05rem}
+  .options{display:flex; flex-wrap:wrap; gap:8px}
+  .options label{
+    display:inline-flex; align-items:center; gap:6px;
+    border:1px solid var(--border); border-radius:8px; padding:6px 12px;
+    cursor:pointer; background:#f8fafc; transition:.15s;
+  }
+  .options label:hover{border-color:var(--primary); background:#eff6ff}
+  .options input{accent-color:var(--primary)}
+  input[type="text"]{
+    font:inherit; padding:10px 12px; border:1px solid var(--border);
+    border-radius:8px; background:#f8fafc; width:100%; max-width:350px;
+  }
+  input[type="text"]:focus{outline:2px solid #bfdbfe; border-color:var(--primary)}
+  .feedback{font-size:.9rem; margin-top:8px; font-weight:600}
+  .feedback.ok{color:var(--ok)}
+  .feedback.bad{color:var(--bad)}
+  .feedback.ok::before{content:"✔ "}
+  .feedback.bad::before{content:"✘ "}
+  .btn-row{display:flex; flex-wrap:wrap; gap:12px; margin-top:8px}
+  button{
+    font:inherit; font-weight:600; cursor:pointer; border:none; border-radius:10px;
+    padding:12px 22px; transition:.15s;
+  }
+  .btn-primary{background:var(--primary); color:#fff}
+  .btn-primary:hover{background:var(--primary-dark)}
+  .btn-ghost{background:#fff; color:var(--primary-dark); border:1px solid var(--primary)}
+  .btn-ghost:hover{background:#eff6ff}
+  .score{
+    position:fixed; bottom:0; left:0; right:0; z-index:10;
+    background:#1e293b; color:#fff; padding:14px 20px;
+    display:flex; flex-wrap:wrap; gap:12px; align-items:center; justify-content:center;
+    box-shadow:0 -4px 14px rgba(0,0,0,.1);
+  }
+  .score .val{font-size:1.3rem; font-weight:700; margin:0 5px;}
+  .score .val.ok{color:#4ade80}
+  .score .val.bad{color:#f87171}
+  .score .msg{font-size:.95rem; opacity:.9}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Unit 2 — Travel and Transport (Extra)</h1>
+  <p>Phrasal Verbs, Collocations, Prepositions & Word Formation</p>
+</header>
+
+<main>
+
+  <!-- ================= PHRASAL VERBS ================= -->
+  <section class="card" id="sec-phrasal">
+    <h2><span class="num">2</span> Phrasal verbs</h2>
+    <p class="hint">Впишите пропущенный предлог или глагол в нужной форме (маленькими буквами).</p>
+
+    <div class="q" data-answer="see">
+      <div class="prompt">1. All her relatives came to the station to <b>___</b> her off.</div>
+      <input type="text" placeholder="ваш ответ">
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="pick">
+      <div class="prompt">2. I will <b>___</b> you up on my way home.</div>
+      <input type="text" placeholder="ваш ответ">
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="over">
+      <div class="prompt">3. The pedestrian died after he was run <b>___</b> by three passing motorists.</div>
+      <input type="text" placeholder="ваш ответ">
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="in">
+      <div class="prompt">4. Passengers must check <b>___</b> at the airport at least an hour before departure.</div>
+      <input type="text" placeholder="ваш ответ">
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="get">
+      <div class="prompt">5. It is such a pleasure to <b>___</b> back home after a long journey.</div>
+      <input type="text" placeholder="ваш ответ">
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="set">
+      <div class="prompt">6. The band will <b>___</b> out on a European tour at the end of August.</div>
+      <input type="text" placeholder="ваш ответ">
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="drop">
+      <div class="prompt">7. Please <b>___</b> me off next to the school as I am a little bit late.</div>
+      <input type="text" placeholder="ваш ответ">
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="in">
+      <div class="prompt">8. The driver pulled <b>___</b> to let the ambulance pass.</div>
+      <input type="text" placeholder="ваш ответ">
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="turned">
+      <div class="prompt">9. Suddenly she <b>___</b> round and ran away as fast as she could.</div>
+      <input type="text" placeholder="ваш ответ">
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="take">
+      <div class="prompt">10. They announced that the plane would <b>___</b> off two hours late.</div>
+      <input type="text" placeholder="ваш ответ">
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="for">
+      <div class="prompt">11. Rick picked up his umbrella and made <b>___</b> the door.</div>
+      <input type="text" placeholder="ваш ответ">
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="catch">
+      <div class="prompt">12. You have to work hard to <b>___</b> up with other students as you were ill.</div>
+      <input type="text" placeholder="ваш ответ">
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="out">
+      <div class="prompt">13. Guests should check <b>___</b> of their rooms by 12 o'clock noon.</div>
+      <input type="text" placeholder="ваш ответ">
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="keep">
+      <div class="prompt">14. To be a winner you have not only to <b>___</b> up with your opponents but excel them.</div>
+      <input type="text" placeholder="ваш ответ">
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="gone">
+      <div class="prompt">15. Fred has <b>___</b> away and I don't expect him to return until next Friday.</div>
+      <input type="text" placeholder="ваш ответ">
+      <div class="feedback"></div>
+    </div>
+  </section>
+
+  <!-- ================= TRANSLATION PHRASAL ================= -->
+  <section class="card" id="sec-trans-phrasal">
+    <h2><span class="num">3</span> Translate (Phrasal Verbs)</h2>
+    <p class="hint">Выберите правильный перевод фразового глагола.</p>
+
+    <div class="q" data-answer="check in">
+      <div class="prompt">1. Please (<i>зарегистрируйтесь</i>) ___ at least an hour before departure.</div>
+      <div class="options">
+        <label><input type="radio" name="t1" value="check in"> check in</label>
+        <label><input type="radio" name="t1" value="check out"> check out</label>
+        <label><input type="radio" name="t1" value="set off"> set off</label>
+      </div>
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="run over">
+      <div class="prompt">2. A woman was (<i>сбита</i>) ___ on a pedestrian crossing.</div>
+      <div class="options">
+        <label><input type="radio" name="t2" value="run over"> run over</label>
+        <label><input type="radio" name="t2" value="picked up"> picked up</label>
+        <label><input type="radio" name="t2" value="turned round"> turned round</label>
+      </div>
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="keep up with">
+      <div class="prompt">3. I had to walk fast to (<i>не отстать от</i>) ___ the rest of the group.</div>
+      <div class="options">
+        <label><input type="radio" name="t3" value="keep up with"> keep up with</label>
+        <label><input type="radio" name="t3" value="catch up with"> catch up with</label>
+        <label><input type="radio" name="t3" value="make for"> make for</label>
+      </div>
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="check out">
+      <div class="prompt">4. Guests should (<i>освободить номер</i>) ___ of their rooms by noon.</div>
+      <div class="options">
+        <label><input type="radio" name="t4" value="check out"> check out</label>
+        <label><input type="radio" name="t4" value="check in"> check in</label>
+        <label><input type="radio" name="t4" value="go away"> go away</label>
+      </div>
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="pick you up">
+      <div class="prompt">5. I'll (<i>заеду за тобой</i>) ___ at your place at 7 p.m.</div>
+      <div class="options">
+        <label><input type="radio" name="t5" value="pick you up"> pick you up</label>
+        <label><input type="radio" name="t5" value="drop you off"> drop you off</label>
+        <label><input type="radio" name="t5" value="see you off"> see you off</label>
+      </div>
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="drop off">
+      <div class="prompt">6. Some drivers park illegally on approach roads to (<i>высадить</i>) ___ their passengers.</div>
+      <div class="options">
+        <label><input type="radio" name="t6" value="drop off"> drop off</label>
+        <label><input type="radio" name="t6" value="pick up"> pick up</label>
+        <label><input type="radio" name="t6" value="run over"> run over</label>
+      </div>
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="set off">
+      <div class="prompt">7. Before you (<i>отправишься</i>) ___ on your journey, make sure your passport is up to date.</div>
+      <div class="options">
+        <label><input type="radio" name="t7" value="set off"> set off</label>
+        <label><input type="radio" name="t7" value="take off"> take off</label>
+        <label><input type="radio" name="t7" value="pull in"> pull in</label>
+      </div>
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="catch up">
+      <div class="prompt">8. If you miss a lot of classes, it's very difficult to (<i>догнать</i>) ___ with the rest.</div>
+      <div class="options">
+        <label><input type="radio" name="t8" value="catch up"> catch up</label>
+        <label><input type="radio" name="t8" value="keep up"> keep up</label>
+        <label><input type="radio" name="t8" value="get back"> get back</label>
+      </div>
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="see off">
+      <div class="prompt">9. I'm going to the airport to (<i>проводить</i>) ___ my son before he leaves for Europe.</div>
+      <div class="options">
+        <label><input type="radio" name="t9" value="see off"> see off</label>
+        <label><input type="radio" name="t9" value="drop off"> drop off</label>
+        <label><input type="radio" name="t9" value="pick up"> pick up</label>
+      </div>
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="took off / making for">
+      <div class="prompt">10. The plane (<i>взлетел</i>) ___ at sunrise, (<i>направляясь</i>) ___ a tropical paradise.</div>
+      <div class="options">
+        <label><input type="radio" name="t10" value="took off / making for"> took off / making for</label>
+        <label><input type="radio" name="t10" value="took off / setting off"> took off / setting off</label>
+        <label><input type="radio" name="t10" value="turned round / making for"> turned round / making for</label>
+      </div>
+      <div class="feedback"></div>
+    </div>
+  </section>
+
+  <!-- ================= PREPOSITIONS ================= -->
+  <section class="card" id="sec-preps">
+    <h2><span class="num">4</span> Fill in prepositions</h2>
+    <p class="hint">Впишите только предлог.</p>
+
+    <div class="q" data-answer="at">
+      <div class="prompt">1. A typical passenger jet flies <b>___</b> a speed of about 740-930 km/h.</div>
+      <input type="text" placeholder="ваш ответ">
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="with">
+      <div class="prompt">2. The weather is forecast to continue <b>___</b> rain until about 6 p.m.</div>
+      <input type="text" placeholder="ваш ответ">
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="by">
+      <div class="prompt">3. Someone has picked up my luggage, on purpose or <b>___</b> accident.</div>
+      <input type="text" placeholder="ваш ответ">
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="for">
+      <div class="prompt">4. Please arrange <b>___</b> a taxi to pick me up at six.</div>
+      <input type="text" placeholder="ваш ответ">
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="in">
+      <div class="prompt">5. <b>___</b> a way, I lack a good work-life balance.</div>
+      <input type="text" placeholder="ваш ответ">
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="in">
+      <div class="prompt">6. The hiking trail led us deep into the forest, <b>___</b> the direction of a hidden waterfall.</div>
+      <input type="text" placeholder="ваш ответ">
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="at">
+      <div class="prompt">7. Media representatives should arrive <b>___</b> the Press Centre by 11.40.</div>
+      <input type="text" placeholder="ваш ответ">
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="from">
+      <div class="prompt">8. People differ <b>___</b> one another in their ability to handle stress.</div>
+      <input type="text" placeholder="ваш ответ">
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="in">
+      <div class="prompt">9. Three men were killed <b>___</b> the accident which took place on Saturday.</div>
+      <input type="text" placeholder="ваш ответ">
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="on">
+      <div class="prompt">10. The odd numbers are <b>___</b> the left as you walk up the street.</div>
+      <input type="text" placeholder="ваш ответ">
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="in">
+      <div class="prompt">11. Please let me know <b>___</b> advance if you are running late.</div>
+      <input type="text" placeholder="ваш ответ">
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="of">
+      <div class="prompt">12. The road repair works were completed ahead <b>___</b> schedule.</div>
+      <input type="text" placeholder="ваш ответ">
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="in">
+      <div class="prompt">13. The vice-president arrived <b>___</b> New York for a three-day visit.</div>
+      <input type="text" placeholder="ваш ответ">
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="to">
+      <div class="prompt">14. Follow this street for around 200 metres and then turn <b>___</b> the left.</div>
+      <input type="text" placeholder="ваш ответ">
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="to">
+      <div class="prompt">15. I often write <b>___</b> my friends to share updates about the amazing landmarks.</div>
+      <input type="text" placeholder="ваш ответ">
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="on">
+      <div class="prompt">16. For those keen <b>___</b> history, a visit to ancient ruins is a must-do.</div>
+      <input type="text" placeholder="ваш ответ">
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="off">
+      <div class="prompt">17. I can't tell you Nelly's phone number <b>___</b> the top of my head.</div>
+      <input type="text" placeholder="ваш ответ">
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="on">
+      <div class="prompt">18. While navigating, you can add a stop to your route <b>___</b> the way to your final destination.</div>
+      <input type="text" placeholder="ваш ответ">
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="of">
+      <div class="prompt">19. Humans are innately afraid <b>___</b> heights.</div>
+      <input type="text" placeholder="ваш ответ">
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="on">
+      <div class="prompt">20. What's better than going <b>___</b> holiday? Going <b>___</b> a trip with a friend! (введите оба предлога через пробел, если они одинаковые, или только один)</div>
+      <input type="text" placeholder="ваш ответ">
+      <div class="feedback"></div>
+    </div>
+  </section>
+
+  <!-- ================= TRANSLATION COLLOCATIONS ================= -->
+  <section class="card" id="sec-trans-colloc">
+    <h2><span class="num">5</span> Translate (Collocations)</h2>
+    <p class="hint">Выберите правильный перевод словосочетания.</p>
+
+    <div class="q" data-answer="on holiday">
+      <div class="prompt">1. Italy is a fabulous destination to go ___ (<i>в отпуск</i>) in November.</div>
+      <div class="options">
+        <label><input type="radio" name="c1" value="on holiday"> on holiday</label>
+        <label><input type="radio" name="c1" value="on a trip"> on a trip</label>
+        <label><input type="radio" name="c1" value="on business"> on business</label>
+      </div>
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="on the left">
+      <div class="prompt">2. In Britain cars drive ___ (<i>слева</i>).</div>
+      <div class="options">
+        <label><input type="radio" name="c2" value="on the left"> on the left</label>
+        <label><input type="radio" name="c2" value="in the left"> in the left</label>
+        <label><input type="radio" name="c2" value="to the left"> to the left</label>
+      </div>
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="by accident">
+      <div class="prompt">3. ___ (<i>Случайно</i>), we took the wrong train and ended up in Pompeii.</div>
+      <div class="options">
+        <label><input type="radio" name="c3" value="by accident"> by accident</label>
+        <label><input type="radio" name="c3" value="on accident"> on accident</label>
+        <label><input type="radio" name="c3" value="in accident"> in accident</label>
+      </div>
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="in advance">
+      <div class="prompt">4. It's cheaper if you book the tickets ___ (<i>заранее</i>).</div>
+      <div class="options">
+        <label><input type="radio" name="c4" value="in advance"> in advance</label>
+        <label><input type="radio" name="c4" value="on advance"> on advance</label>
+        <label><input type="radio" name="c4" value="by advance"> by advance</label>
+      </div>
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="in the direction">
+      <div class="prompt">5. Fire exit doors should open ___ (<i>в направлении</i>) of escape.</div>
+      <div class="options">
+        <label><input type="radio" name="c5" value="in the direction"> in the direction</label>
+        <label><input type="radio" name="c5" value="to the direction"> to the direction</label>
+        <label><input type="radio" name="c5" value="on the direction"> on the direction</label>
+      </div>
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="go ahead">
+      <div class="prompt">6. 'Do you mind if I open the window?' 'No, ___ (<i>давай</i>).'</div>
+      <div class="options">
+        <label><input type="radio" name="c6" value="go ahead"> go ahead</label>
+        <label><input type="radio" name="c6" value="go away"> go away</label>
+        <label><input type="radio" name="c6" value="go on"> go on</label>
+      </div>
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="turn left">
+      <div class="prompt">7. Go straight along this road and ___ (<i>поверни налево</i>) at the traffic lights.</div>
+      <div class="options">
+        <label><input type="radio" name="c7" value="turn left"> turn left</label>
+        <label><input type="radio" name="c7" value="turn to left"> turn to left</label>
+        <label><input type="radio" name="c7" value="turn the left"> turn the left</label>
+      </div>
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="in an accident">
+      <div class="prompt">8. Her father died suddenly ___ (<i>в аварии</i>) when she was only ten.</div>
+      <div class="options">
+        <label><input type="radio" name="c8" value="in an accident"> in an accident</label>
+        <label><input type="radio" name="c8" value="on an accident"> on an accident</label>
+        <label><input type="radio" name="c8" value="by an accident"> by an accident</label>
+      </div>
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="on a business trip">
+      <div class="prompt">9. Mrs Glorie's away ___ (<i>в командировке</i>) and won't be back until next week.</div>
+      <div class="options">
+        <label><input type="radio" name="c9" value="on a business trip"> on a business trip</label>
+        <label><input type="radio" name="c9" value="on business trip"> on business trip</label>
+        <label><input type="radio" name="c9" value="in a business trip"> in a business trip</label>
+      </div>
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="speed limit">
+      <div class="prompt">10. The road has a ___ (<i>ограничение скорости</i>) of 90 km/h.</div>
+      <div class="options">
+        <label><input type="radio" name="c10" value="speed limit"> speed limit</label>
+        <label><input type="radio" name="c10" value="limit speed"> limit speed</label>
+        <label><input type="radio" name="c10" value="high speed"> high speed</label>
+      </div>
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="lost our way">
+      <div class="prompt">11. We ___ (<i>заблудились</i>) in the dark and started to panic.</div>
+      <div class="options">
+        <label><input type="radio" name="c11" value="lost our way"> lost our way</label>
+        <label><input type="radio" name="c11" value="missed our way"> missed our way</label>
+        <label><input type="radio" name="c11" value="found our way"> found our way</label>
+      </div>
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="at high speed">
+      <div class="prompt">12. It's very dangerous to drive ___ (<i>на высокой скорости</i>) when the roads are wet.</div>
+      <div class="options">
+        <label><input type="radio" name="c12" value="at high speed"> at high speed</label>
+        <label><input type="radio" name="c12" value="in high speed"> in high speed</label>
+        <label><input type="radio" name="c12" value="on high speed"> on high speed</label>
+      </div>
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="go ahead">
+      <div class="prompt">13. Let's ___ (<i>пойдём вперёд</i>) and explore the world because it really deserves it.</div>
+      <div class="options">
+        <label><input type="radio" name="c13" value="go ahead"> go ahead</label>
+        <label><input type="radio" name="c13" value="go straight"> go straight</label>
+        <label><input type="radio" name="c13" value="go forward"> go forward</label>
+      </div>
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="tour of">
+      <div class="prompt">14. Taking a ___ (<i>поездка по</i>) the Great Wall of China is a must for anyone visiting Beijing.</div>
+      <div class="options">
+        <label><input type="radio" name="c14" value="tour of"> tour of</label>
+        <label><input type="radio" name="c14" value="trip of"> trip of</label>
+        <label><input type="radio" name="c14" value="journey of"> journey of</label>
+      </div>
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="ahead of us">
+      <div class="prompt">15. I didn't notice that the car ___ (<i>впереди нас</i>) had stopped in traffic.</div>
+      <div class="options">
+        <label><input type="radio" name="c15" value="ahead of us"> ahead of us</label>
+        <label><input type="radio" name="c15" value="in front of us"> in front of us</label>
+        <label><input type="radio" name="c15" value="before us"> before us</label>
+      </div>
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="advance">
+      <div class="prompt">16. The team failed to ___ (<i>продвинуться</i>) to the next round of the competition.</div>
+      <div class="options">
+        <label><input type="radio" name="c16" value="advance"> advance</label>
+        <label><input type="radio" name="c16" value="go ahead"> go ahead</label>
+        <label><input type="radio" name="c16" value="move"> move</label>
+      </div>
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="on the way">
+      <div class="prompt">17. We recommend cycling to Sticky Fingers so you can burn off some calories ___ (<i>по пути</i>) back.</div>
+      <div class="options">
+        <label><input type="radio" name="c17" value="on the way"> on the way</label>
+        <label><input type="radio" name="c17" value="in the way"> in the way</label>
+        <label><input type="radio" name="c17" value="by the way"> by the way</label>
+      </div>
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="see the sights">
+      <div class="prompt">18. You should take the bus if you want to ___ (<i>осмотреть достопримечательности</i>).</div>
+      <div class="options">
+        <label><input type="radio" name="c18" value="see the sights"> see the sights</label>
+        <label><input type="radio" name="c18" value="watch the sights"> watch the sights</label>
+        <label><input type="radio" name="c18" value="look the sights"> look the sights</label>
+      </div>
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="in a way">
+      <div class="prompt">19. ___ (<i>В некоторой степени</i>), travelling light was one of our biggest mistakes.</div>
+      <div class="options">
+        <label><input type="radio" name="c19" value="in a way"> in a way</label>
+        <label><input type="radio" name="c19" value="on a way"> on a way</label>
+        <label><input type="radio" name="c19" value="by a way"> by a way</label>
+      </div>
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="make his way">
+      <div class="prompt">20. A man who wishes to ___ (<i>делать карьеру</i>) in life should go through the world with a boiling tea-kettle in his hand.</div>
+      <div class="options">
+        <label><input type="radio" name="c20" value="make his way"> make his way</label>
+        <label><input type="radio" name="c20" value="do his way"> do his way</label>
+        <label><input type="radio" name="c20" value="take his way"> take his way</label>
+      </div>
+      <div class="feedback"></div>
+    </div>
+  </section>
+
+  <!-- ================= ONE WORD BOTH SENTENCES ================= -->
+  <section class="card" id="sec-oneword">
+    <h2><span class="num">6</span> One word for both</h2>
+    <p class="hint">Впишите одно слово, которое подходит для обоих предложений.</p>
+
+    <div class="q" data-answer="go">
+      <div class="prompt">1. Hawaii offers fantastic opportunities to <b>___</b> sightseeing.<br>Would you mind if I sit here? ~ Not at all. <b>___</b> ahead.</div>
+      <input type="text" placeholder="ваш ответ">
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="way">
+      <div class="prompt">2. Getting lost is a terrible feeling, and it can be difficult to find your <b>___</b> back.<br>On the <b>___</b> to the hotel, we spotted a colourful street market.</div>
+      <input type="text" placeholder="ваш ответ">
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="trip">
+      <div class="prompt">3. She packed her laptop and documents for the upcoming business <b>___</b> to Chicago.<br>We hired a motorboat and took a romantic <b>___</b> round the bay.</div>
+      <input type="text" placeholder="ваш ответ">
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="speed">
+      <div class="prompt">4. The <b>___</b> of light is an incredible 299,792,458 meters per second.<br>Going even 1 km an hour over the <b>___</b> limit counts as speeding.</div>
+      <input type="text" placeholder="ваш ответ">
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="tour">
+      <div class="prompt">5. We enjoyed a guided <b>___</b> of the ancient ruins.<br>Exploring the local cuisine was a highlight of our sightseeing <b>___</b> of Italy.</div>
+      <input type="text" placeholder="ваш ответ">
+      <div class="feedback"></div>
+    </div>
+  </section>
+
+  <!-- ================= WORD FORMATION ================= -->
+  <section class="card" id="sec-formation">
+    <h2><span class="num">7</span> Word formation</h2>
+    <p class="hint">Измените форму слова из скобок и впишите его (маленькими буквами).</p>
+
+    <div class="q" data-answer="photographer">
+      <div class="prompt">1. You don't have to be a professional <b>___</b> to capture picture-perfect moments. [PHOTO]</div>
+      <input type="text" placeholder="ваш ответ">
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="cultural">
+      <div class="prompt">2. Vitebsk is widely regarded as being second only to Minsk as the <b>___</b> capital of Belarus. [CULTURE]</div>
+      <input type="text" placeholder="ваш ответ">
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="recognition">
+      <div class="prompt">3. SoundHound is one of the best apps like Shazam when it comes to music <b>___</b>. [RECOGNISE]</div>
+      <input type="text" placeholder="ваш ответ">
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="different">
+      <div class="prompt">4. <b>___</b> lighting conditions can affect the way a person looks in a photo. [DIFFER]</div>
+      <input type="text" placeholder="ваш ответ">
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="direction">
+      <div class="prompt">5. He followed the signs and soon found himself heading in the right <b>___</b>. [DIRECT]</div>
+      <input type="text" placeholder="ваш ответ">
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="arrival">
+      <div class="prompt">6. The <b>___</b> of the flight from Hurgada is delayed. [ARRIVE]</div>
+      <input type="text" placeholder="ваш ответ">
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="tourists">
+      <div class="prompt">7. The Story of the Loch Ness Monster has attracted many <b>___</b> to the area. [TOUR]</div>
+      <input type="text" placeholder="ваш ответ">
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="entrance">
+      <div class="prompt">8. There are several parking spaces directly opposite the museum <b>___</b>. [ENTER]</div>
+      <input type="text" placeholder="ваш ответ">
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="distance">
+      <div class="prompt">9. The hotel is conveniently located within a short walking <b>___</b>. [DISTANT]</div>
+      <input type="text" placeholder="ваш ответ">
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="rearrange">
+      <div class="prompt">10. All passengers to these destinations are being advised to <b>___</b> their flights. [ARRANGE]</div>
+      <input type="text" placeholder="ваш ответ">
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="inhabitants">
+      <div class="prompt">11. There are 1.995,5 million <b>___</b> in Minsk (on 1 January 2023). [INHABIT]</div>
+      <input type="text" placeholder="ваш ответ">
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="differently">
+      <div class="prompt">12. Tourists behave <b>___</b> abroad because they are disconnected from the residents. [DIFFER]</div>
+      <input type="text" placeholder="ваш ответ">
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="tourism">
+      <div class="prompt">13. <b>___</b> allows people to explore new places, experience different cultures, and create lasting memories. [TOUR]</div>
+      <input type="text" placeholder="ваш ответ">
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="breadth">
+      <div class="prompt">14. A 70-year-old grandfather has completed a 40-day challenge to travel the length and <b>___</b> of England entirely by public buses. [BROAD]</div>
+      <input type="text" placeholder="ваш ответ">
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="difference">
+      <div class="prompt">15. The standard rule of thumb is that it takes the body one day to adjust to every hour of time zone <b>___</b>. [DIFFER]</div>
+      <input type="text" placeholder="ваш ответ">
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="arrangements">
+      <div class="prompt">16. The primary role of a travel agent is to help people make travel <b>___</b> like booking flights, hotels. [ARRANGE]</div>
+      <input type="text" placeholder="ваш ответ">
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="broaden">
+      <div class="prompt">17. Gastronomic tours offer a unique opportunity to <b>___</b> your culinary horizons. [BROAD]</div>
+      <input type="text" placeholder="ваш ответ">
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="indirect">
+      <div class="prompt">18. An <b>___</b> flight as the name suggests does not go direct, but uses a main hub airport. [DIRECT]</div>
+      <input type="text" placeholder="ваш ответ">
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="unrecognisable">
+      <div class="prompt">19. The reception area is <b>___</b> after a complete renovation of the hotel. [RECOGNISE]</div>
+      <input type="text" placeholder="ваш ответ">
+      <div class="feedback"></div>
+    </div>
+    <div class="q" data-answer="indifferent">
+      <div class="prompt">20. Despite the breathtaking scenery, Emma remained <b>___</b> to the beauty of the mountains. [DIFFER]</div>
+      <input type="text" placeholder="ваш ответ">
+      <div class="feedback"></div>
+    </div>
+  </section>
+
+  <div class="btn-row" style="margin-bottom: 40px;">
+    <button class="btn-primary" id="checkBtn">Проверить всё</button>
+    <button class="btn-ghost" id="resetBtn">Сбросить</button>
+  </div>
+
+</main>
+
+<div class="score" id="scoreBar">
+  <div>
+    <span>Результат: </span>
+    <span class="val" id="scoreVal">—</span>
+    <span id="scoreMsg" class="msg"></span>
+  </div>
+</div>
+
+<script>
+(function(){
+  var $ = function(s, r) { return (r || document).querySelector(s); };
+  var $$ = function(s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+
+  function norm(s){
+    return (s || '').toString().trim().toLowerCase().replace(/\s+/g, ' ');
+  }
+
+  var mistakeCounts = new WeakMap();
+
+  function getMistakes(el){
+    return mistakeCounts.get(el) || 0;
+  }
+  function incMistakes(el){
+    var n = getMistakes(el) + 1;
+    mistakeCounts.set(el, n);
+    return n;
+  }
+
+  function setFeedback(fbEl, ok, correctText, mistakes){
+    fbEl.classList.remove('ok', 'bad');
+    if(ok){
+      fbEl.textContent = 'Верно';
+      fbEl.classList.add('ok');
+      return;
+    }
+    if(mistakes >= 3){
+      fbEl.textContent = 'Неверно. Правильный ответ: ' + correctText;
+    } else {
+      var left = 3 - mistakes;
+      fbEl.textContent = 'Неверно. Попробуйте ещё раз (до подсказки осталось: ' + left + ').';
+    }
+    fbEl.classList.add('bad');
+  }
+
+  function checkRadioQuestion(qEl){
+    var answer = qEl.getAttribute('data-answer');
+    var checked = qEl.querySelector('input[type=radio]:checked');
+    var fb = qEl.querySelector('.feedback');
+    if(!checked){
+      fb.classList.remove('ok', 'bad');
+      fb.textContent = 'Нет ответа';
+      fb.classList.add('bad');
+      return false;
+    }
+    var ok = norm(checked.value) === norm(answer);
+    var mistakes = ok ? getMistakes(qEl) : incMistakes(qEl);
+    setFeedback(fb, ok, answer, mistakes);
+    return ok;
+  }
+
+  function checkTextQuestion(qEl){
+    var answer = qEl.getAttribute('data-answer');
+    var input = qEl.querySelector('input[type=text]');
+    var fb = qEl.querySelector('.feedback');
+    if(!input.value.trim()){
+      fb.classList.remove('ok', 'bad');
+      fb.textContent = 'Нет ответа';
+      fb.classList.add('bad');
+      return false;
+    }
+    
+    // Для 20-го вопроса с двумя одинаковыми предлогами (on / on)
+    var userVal = norm(input.value);
+    var answerVal = norm(answer);
+    
+    if (answerVal === 'on' && (userVal === 'on on' || userVal === 'on')) {
+       // Разрешаем ввести как одно, так и два слова
+    }
+
+    var ok = userVal === answerVal;
+    var mistakes = ok ? getMistakes(qEl) : incMistakes(qEl);
+    setFeedback(fb, ok, answer, mistakes);
+    return ok;
+  }
+
+  function checkAll(){
+    var total = 0, correct = 0;
+
+    $$('.q').forEach(function(q){
+      if(q.querySelector('input[type=radio]')){
+        total++;
+        if(checkRadioQuestion(q)) correct++;
+      } else if(q.querySelector('input[type=text]')){
+        total++;
+        if(checkTextQuestion(q)) correct++;
+      }
+    });
+
+    var val = $('#scoreVal');
+    var msg = $('#scoreMsg');
+    val.textContent = correct + ' / ' + total;
+    val.classList.remove('ok', 'bad');
+
+    var pct = total ? Math.round(correct / total * 100) : 0;
+    if(pct === 100){
+      val.classList.add('ok');
+      msg.textContent = 'Отлично! Всё верно!';
+    } else if(pct >= 70){
+      val.classList.add('ok');
+      msg.textContent = '(' + pct + '%) Хороший результат.';
+    } else {
+      val.classList.add('bad');
+      msg.textContent = '(' + pct + '%) Повторите материал и попробуйте снова.';
+    }
+  }
+
+  function resetAll(){
+    $$('input[type=radio]').forEach(function(i){ i.checked = false; });
+    $$('input[type=text]').forEach(function(i){ i.value = ''; });
+    $$('.feedback').forEach(function(f){ f.textContent = ''; f.classList.remove('ok', 'bad'); });
+    $$('.q').forEach(function(el){ mistakeCounts.delete(el); });
+    var val = $('#scoreVal');
+    val.textContent = '—';
+    val.classList.remove('ok', 'bad');
+    $('#scoreMsg').textContent = '';
+  }
+
+  $('#checkBtn').addEventListener('click', checkAll);
+  $('#resetBtn').addEventListener('click', resetAll);
+
+  $$('input[type=text]').forEach(function(inp){
+    inp.addEventListener('keydown', function(e){
+      if(e.key === 'Enter'){ e.preventDefault(); checkAll(); }
+    });
+  });
+})();
+</script>
+</body>
+</html>
